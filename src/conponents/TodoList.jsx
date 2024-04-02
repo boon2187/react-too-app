@@ -4,7 +4,7 @@ import Todo from './Todo'
 const TodoList = ({todos}) => {
   return (
     <ul>
-        {todos.map((todo, index) => <Todo key={index} todo={todo} />)}
+        {todos.map((todo) => <Todo key={todo.id} id={todo.id} task={todo.task} />)}
     </ul>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Todo = ({todo}) => {
+const Todo = ({id, task}) => {
   return (
-    <li>{todo}</li>
+    <li>idは{id}でtaskは{task}</li>
   )
 }
 
