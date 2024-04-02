@@ -8,14 +8,14 @@ import TodoList from './conponents/TodoList';
 
 function App() {
   // Todoを保持するstateを作成
-  const [todos, setTodos] = useState();
+  const [todos, setTodos] = useState(["todo1","todo2","todo3"]);
 
 
   return (
     <div >
       <Header />
       <Input />
-      <TodoList />
+      <TodoList todos={todos} />
     </div>
   );
 }
