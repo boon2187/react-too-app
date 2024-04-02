@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Todo = ({id,task,deleteTodo}) => {
+const Todo = ({todo,deleteTodo}) => {
   return (
     <li>
-      {task}
+      {todo.task}
       <button>削除</button>
     </li>
   )
