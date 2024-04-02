@@ -2,7 +2,7 @@ import React from 'react'
 
 const Todo = ({id, task}) => {
   return (
-    <li>{task}</li>
+    <li>{id}, {task}</li>
   )
 }
 
