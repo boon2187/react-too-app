@@ -7,6 +7,9 @@ const Input = ({addTodo}) => {
   
   // ボタンが押されたらinputのvalueを引数にしてaddTodo関数を実行してtodosに追加
   const hundleClick = () => {
+    // inputValueが空の場合は何もしない
+    if(!inputValue) return;
+    
     addTodo(inputValue);
     setInputValue("");
   }
