@@ -21,7 +21,9 @@ function App() {
     }
 
     // newTodoをtodosに追加
-    setTodos([...todos, newTodo]);
+    setTodos((prevTodos)=> {
+      return [...prevTodos, newTodo]; 
+    });
   }
 
   // Todoを削除する関数
