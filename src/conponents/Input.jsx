@@ -1,10 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
 
 const Input = ({addTodo}) => {
+  // inputのvalueを保持するstateを作成
+  const [inputValue, setInputValue] = useState("");
+  
+  // ボタンが押されたらinputのvalueを引数にしてaddTodo関数を実行してtodosに追加
+  const hundleClick = () => {
+    addTodo(inputValue);
+    setInputValue("");
+  }
+
   return (
     <div>
-        <input type="text" />
-        <button onClick={addTodo}>Todoを追加</button>
+        <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+        <button onClick={hundleClick}>Todoを追加</button>
     </div>
   )
 }
