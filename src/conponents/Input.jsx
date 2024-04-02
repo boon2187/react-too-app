@@ -2,7 +2,10 @@ import React from 'react'
 
 const Input = () => {
   return (
-    <div>Input</div>
+    <div>
+        <input type="text" />
+        <button>Todoを追加</button>
+    </div>
   )
 }
 
