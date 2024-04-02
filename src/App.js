@@ -13,7 +13,7 @@ function App() {
 
   // Todoを追加する関数
   const addTodo = (addingtask) => {
-    // 受け取ったaddingtaskを下に新しい
+    // 受け取ったaddingtaskでに新しいTodoを作成
     const newTodo = {
       id: uuidv4(), // 一意のIDを生成
       task: addingtask,
@@ -38,6 +38,7 @@ function App() {
       if(todo.id === id) {
         todo.isFinished = !todo.isFinished;
       }
+      // idが一致しないものはそのまま返す
       return todo;
     })
     setTodos(newTodos);

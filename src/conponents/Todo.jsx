@@ -1,15 +1,18 @@
 import React from 'react'
 import classes from './Todo.module.css'
 
+// Todoを表示するコンポーネント
+// 受け取るpropsは個別のtodoと、todoを消すdeleteTodo, isFinishedを変更するtoggleIsFinished
 const Todo = ({todo,deleteTodo, toggleIsFinished}) => {
-  // ボタンが押されたらdeleteTodo関数を実行してtodosから削除
+  // 削除ボタンが押されたらdeleteTodo関数を実行してtodosから削除
   const hundleClick = () => {
     deleteTodo(todo.id);
   }
 
-const hundleToggle = () => {
-  toggleIsFinished(todo.id);
-}
+  // チェックボックスが押されたらtoggleIsFinished関数を実行してisFinishedを変更
+  const hundleToggle = () => {
+    toggleIsFinished(todo.id);
+  }
 
 
   return (

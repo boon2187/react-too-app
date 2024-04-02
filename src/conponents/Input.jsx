@@ -11,6 +11,7 @@ const Input = ({addTodo}) => {
     if(!inputValue) return;
     
     addTodo(inputValue);
+    // inputのinputValueを空にして、input内が空になるように
     setInputValue("");
   }
 
