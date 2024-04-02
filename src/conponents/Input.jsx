@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({addTodo}) => {
   return (
     <div>
         <input type="text" />
-        <button>Todoを追加</button>
+        <button onClick={addTodo}>Todoを追加</button>
     </div>
   )
 }
