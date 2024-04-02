@@ -14,8 +14,8 @@ const hundleToggle = () => {
 
   return (
     <li>
+      <input type='checkbox' checked={todo.isFinished} onChange={hundleToggle}/>
       <span className={todo.isFinished ? classes.finished : ""}>{todo.task}</span>
-      <button onClick={hundleToggle}>{todo.isFinished ? "未完了に" :"完了"}</button>
       <button onClick={hundleClick}>削除</button>
     </li>
   )
