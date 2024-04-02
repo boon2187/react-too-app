@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Todo = ({task}) => {
+const Todo = ({id,task,deleteTodo}) => {
   return (
-    <li>{task}</li>
+    <li>
+      {task}
+      <button>削除</button>
+    </li>
   )
 }
 

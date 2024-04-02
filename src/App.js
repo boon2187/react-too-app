@@ -24,11 +24,18 @@ function App() {
     setTodos([...todos, newTodo]);
   }
 
+  // Todoを削除する関数
+  const deleteTodo = (id) => {
+    // idが一致しないものだけを抽出して新しい配列を作成
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  }
+
   return (
     <div >
       <Header />
       <Input addTodo={addTodo}/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo}/>
     </div>
   );
 }
