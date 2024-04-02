@@ -31,11 +31,23 @@ function App() {
     setTodos(newTodos);
   }
 
+  // isFinishedを変更する関数
+  const toggleIsFinished = (id) => {
+    // idが一致する要素のisFinishedを変更
+    const newTodos = todos.map((todo) => {
+      if(todo.id === id) {
+        todo.isFinished = !todo.isFinished;
+      }
+      return todo;
+    })
+    setTodos(newTodos);
+  }
+
   return (
     <div >
       <Header />
       <Input addTodo={addTodo}/>
-      <TodoList todos={todos} deleteTodo={deleteTodo}/>
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleIsFinished={toggleIsFinished}/>
     </div>
   );
 }
