@@ -1,6 +1,7 @@
 import './App.css';
 
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import Header from './conponents/Header';
 import Input from './conponents/Input';
@@ -14,7 +15,7 @@ function App() {
   const addTodo = (addingtask) => {
     // 受け取ったaddingtaskを下に新しい
     const newTodo = {
-      id: todos.length + 1, // とりあえずidはこのあとuuidで生成する用意にする
+      id: uuidv4(), // 一意のIDを生成
       task: addingtask,
       isFinished: false
     }
