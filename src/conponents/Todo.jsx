@@ -8,7 +8,8 @@ const Todo = ({todo,deleteTodo}) => {
 
   return (
     <li>
-      {todo.task}
+      {todo.task} - {todo.isFinished ? "完了" : "未完了"}
+      <button>完了</button>
       <button onClick={hundleClick}>削除</button>
     </li>
   )
