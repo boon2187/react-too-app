@@ -9,7 +9,7 @@ const Todo = ({todo,deleteTodo}) => {
   return (
     <li>
       {todo.task} - {todo.isFinished ? "完了" : "未完了"}
-      <button>完了</button>
+      <button>{todo.isFinished ? "未完了に" :"完了"}</button>
       <button onClick={hundleClick}>削除</button>
     </li>
   )
