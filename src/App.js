@@ -47,7 +47,7 @@ function App() {
   }
 
   return (
-    <div >
+    <div className="flex justify-center">
       <Header />
       <Input addTodo={addTodo}/>
       <TodoList todos={todos} deleteTodo={deleteTodo} toggleIsFinished={toggleIsFinished}/>
