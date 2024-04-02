@@ -19,6 +19,7 @@ function App() {
       isFinished: false
     }
 
+    // newTodoをtodosに追加
     setTodos([...todos, newTodo]);
   }
 
